@@ -1,33 +1,29 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
+import EventList from "./views/EventList";
+import EventCreate from "./views/EventCreate";
+import EventShow from "./views/EventShow";
 
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      name: "event-list",
+      component: EventList
     },
     {
-      path: "/about-us",
-      name: "about",
-      component: About
+      path: "/event/:id",
+      name: "event-show",
+      component: EventShow,
+      props: true
     },
     {
-      path: "/test",
-      name: "myVue",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("./views/Home.1.vue")
-    },
-    {
-      path: "/about",
-      redirect: { name: "about" }
+      path: "/event/create",
+      name: "event-create",
+      component: EventCreate
     }
   ]
 });
