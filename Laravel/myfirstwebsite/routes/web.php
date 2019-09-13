@@ -11,16 +11,18 @@
 |
 */
 
-Route::get('/projects', "ProjectsController@index");
+Route::resource('project', 'ProjectsController');
 
-Route::post('/projects', "ProjectsController@store");
+// Route::get('/projects', "ProjectController@index");
 
-Route::get('/projects/create', "ProjectsController@create");
+// Route::get('/projects/create', "ProjectController@create");
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+// Route::get('/projects/{id?}', "ProjectController@show");
 
-Route::get('/about', function () {
-    return view('contact');
-});
+// Route::post('/projects', "ProjectController@store");
+
+// Route::get('projects/{id?}/edit', "ProjectController@edit");
+
+// Route::patch('projects/{id?}', 'ProjectController@update');
+
+// Route::delete('projects/{id?}', 'ProjectController@destroy');

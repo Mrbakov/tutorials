@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <body>
-    <h1>Create project</h1>
+        <body>
+            <h1>Create project</h1>
 
-    <form method="POST" action="/projects">
-    {{ csrf_field() }}
-    
-        <div>
-            <input type="text" name="title" placeholder="Project title">
-        </div>
+            <form method="POST" action="/project">
+                {{ csrf_field() }}
 
-        <div>
-            <input type="text" name="description" placeholder="Project description">
-        </div>
+                <div>
+                    <input
+                        type="text"
+                        name="title"
+                        placeholder="Project title"
+                    />
+                </div>
 
-        <div>
-            <button type="submit">Crate Project</button>
-        </div>
+                <div>
+                    <input
+                        type="text"
+                        name="description"
+                        placeholder="Project description"
+                    />
+                </div>
 
-    </form>
-    </body>
+                <div>
+                    <button type="submit">Crate Project</button>
+                </div>
+            </form>
+        </body>
+    </head>
 </html>
