@@ -13,6 +13,10 @@
 
 Route::get('/projects', "ProjectsController@index");
 
+Route::post('/projects', "ProjectsController@store");
+
+Route::get('/projects/create', "ProjectsController@create");
+
 Route::get('/contact', function () {
     return view('contact');
 });

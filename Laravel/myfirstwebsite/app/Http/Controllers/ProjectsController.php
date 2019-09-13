@@ -3,15 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Project;
 
 class ProjectsController extends Controller
 {
     public function index()
     {
-        $projects = \App\Project::all();
+        $projects = Project::all();
 
-        return $projects;
+        return view('projects.index', compact('projects'));
+    }
 
-        return view('index');
+    public function create()
+    {
+        return view('projects.create');
+    }
+
+    public function store()
+    {
+        $project = new Project();
+
+        $project->title = request('title');
+        $project->description = request('description');
+
+        $project->save();
+
+        return redirect('/projects');
     }
 }
