@@ -14,9 +14,10 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        // $projects = Project::all();
+        $projects = Project::with('tasks')->get();
 
-        return view('projects.index', compact('projects'));
+        return $projects;
     }
 
     /**
@@ -37,12 +38,12 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        $project = new Project();
-
-        $project->title = request('title');
-        $project->description = request('description');
-
-        $project->save();
+        Project::create(
+            request()->validate([
+                'title' => ['required', 'min:3'],
+                'description' => ['required', 'min:3']
+            ])
+        );
 
         return redirect('/project');
     }
@@ -53,11 +54,11 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Project $project)
     {
-        $project = Project::findOrFail($id);
-
         return $project;
+
+        return view('projects.show', compact('project'));
     }
 
     /**
@@ -66,10 +67,8 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        $project = Project::findOrFail($id);
-
         return view('projects.edit', compact('project'));
     }
 
@@ -80,15 +79,9 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Project $project)
     {
-       
-        $project = Project::findOrFail($id);
-
-        $project->title = request('title');
-        $project->description = request('description');
-
-        $project->save();
+        Project::update(request(['title', 'description']));
 
         return redirect('project');
     }
@@ -99,11 +92,8 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Project $project)
     {
-
-        $project = Project::findOrFail($id);
-        
         $project->delete();
 
         return redirect('project');
