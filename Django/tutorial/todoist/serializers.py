@@ -15,6 +15,11 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
 
+    def validate_title(self, title):
+        if 'project' not in title.lower():
+            raise serializers.ValidationError('The project title must contain the word project.')
+        return title
+
     class Meta:
         model = Project
         fields = ['id', 'title', 'owner']
