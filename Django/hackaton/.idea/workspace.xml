@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abc1db3f-067d-421d-847c-b788dff20118" name="Default Changelist" comment="" />
+    <list default="true" id="abc1db3f-067d-421d-847c-b788dff20118" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coosto_lunch/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hackaton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hackaton.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/migrations/0002_auto_20191213_1327.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/migrations/0003_auto_20191213_1327.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/coosto_lunch/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/coosto_lunch/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/coosto_lunch/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coosto_lunch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/coosto_lunch/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hackaton/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hackaton/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,16 +27,24 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1UvPVCofRVuLAkzWn0K6Ndfzmrx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tutorial" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
@@ -70,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576234116517</updated>
       <workItem from="1576234117760" duration="9720000" />
+      <workItem from="1579250607256" duration="16670000" />
     </task>
     <servers />
   </component>
@@ -77,17 +103,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2646" y="361" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576243565427">
+    <state x="2646" y="361" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579276571165">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state x="2646" y="361" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1576243565427" />
+    <state x="2646" y="361" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1579276571165" />
+    <state x="2696" y="370" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579263738151">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2696" y="370" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1579263738151" />
     <state x="2402" y="247" key="SettingsEditor" timestamp="1576242071746">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2402" y="247" key="SettingsEditor/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1576242071746" />
-    <state x="2576" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1576237401123">
+    <state x="2523" y="226" width="770" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579263819899">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state x="2576" y="287" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1576237401123" />
+    <state x="2523" y="226" width="770" height="772" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1579263819899" />
+    <state x="2560" y="209" width="707" height="807" key="find.popup" timestamp="1579274858056">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2560" y="209" width="707" height="807" key="find.popup/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1579274858056" />
+    <state x="2576" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1579278745683">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2576" y="287" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1579278745683" />
+    <state x="2618" y="410" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579276496811">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2618" y="410" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1920.1200/0.27.1920.1173@1920.0.1920.1200" timestamp="1579276496811" />
   </component>
 </project>

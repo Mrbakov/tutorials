@@ -1,14 +1,14 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
 from coosto_lunch import views
-from rest_framework.urlpatterns import format_suffix_patterns
+
+router = DefaultRouter()
+router.register(r'dates', views.DateViewSet)
+router.register(r'attendances', views.AttendanceViewSet)
+router.register(r'specials', views.SpecialViewSet)
+router.register(r'foodwishes', views.FoodwishesViewSet)
 
 urlpatterns = [
-    path('coosto-lunch/overviews/', views.OverViewList.as_view()),
-    path('coosto-lunch/roles/', views.RoleList.as_view()),
-    path('coosto-lunch/users/', views.UserList.as_view()),
-    path('coosto-lunch/users/<int:pk>/', views.UserDetail.as_view()),
-    path('coosto-lunch/specials/', views.SpecialList.as_view()),
-    path('coosto-lunch/specials/<int:pk>/', views.SpecialDetail.as_view()),
+    path('', include(router.urls)),
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
