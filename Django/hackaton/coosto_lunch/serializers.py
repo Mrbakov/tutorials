@@ -1,26 +1,26 @@
-from .models import Attendance, Special, Date, Foodwish
+from .models import User, Role, Overview, Special
 from rest_framework import serializers
 
 
-class DateSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Date
+        model = User
+        fields = ['first_name', 'last_name', 'email', 'role', 'overviews']
+
+
+class RoleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Role
+        fields = ['role']
+
+
+class OverviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Overview
         fields = ['date']
 
 
-class AttendanceSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Attendance
-        fields = ['attending', 'date']
-
-
-class SpecialSerializer(serializers.HyperlinkedModelSerializer):
+class SpecialSerializer(serializers.ModelSerializer):
     class Meta:
         model = Special
-        fields = ['name', 'dates']
-
-
-class FoodwishSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Foodwish
-        fields = ['food', 'approved', 'score']
+        fields = ['name', 'overviews']
